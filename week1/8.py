@@ -1,0 +1,5 @@
+p=int(input("enter the principle amount"))
+r=int(input("ente the rate"))
+n=int(input("enter the number of years"))
+si=((p*r*n)/100)
+print(f"simple intreset  is equal to:{si:.3f}") 

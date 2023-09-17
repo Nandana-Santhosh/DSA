@@ -1,0 +1,7 @@
+age1=int(input("enter the age of first person"))
+age2=int(input("enter the age of 2nd person"))
+age3=int(input("enter the age of 3rd person"))
+you=min(age1,age2,age3)
+old=max(age1,age2,age3)
+print("oldest=",old)
+print("youngest=",you)
