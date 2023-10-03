@@ -20,4 +20,19 @@ class Solution:
                 return True
             power+=1
         return False
+    
+
+class Solution:
+def isPowerOfTwo(self, n: int) -> bool:
+        
+        while n>=1:
+            if n==1:
+                 return True
+            elif n%2==0 :   '''on changing 2 to 3/4 we can check the power of those number too'''
+             n=n/2
+
+            else:
+                return False
+            
+
         
