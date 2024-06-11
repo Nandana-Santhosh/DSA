@@ -19,10 +19,10 @@ Output: 0
 Explanation: In this case, no transactions are done and the max profit = 0.'''
 
 
-    def maxProfit(self, prices: List[int]) -> int:
-        m = prices[0]
-        mp=0
-        for i in prices:
-            m=min(i,m)
-            mp=max(mp,i-m)
-        return mp
+        def maxProfit(self, prices: List[int]) -> int:
+            m = prices[0]
+            mp=0
+            for i in prices:
+                m=min(i,m)
+                mp=max(mp,i-m)
+            return mp
