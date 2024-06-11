@@ -37,4 +37,15 @@ class Solution:
         return row[0]
 
         #O(n*m) O(n)
+
+
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        row,col=m,n
+        dp=[[1 for i in range(col)]for j in range(row)]
+
+        for i in range(row-2,-1,-1):
+            for j in range(col-2,-1,-1):
+                dp[i][j]=dp[i+1][j] +dp[i][j+1]
+        return dp[0][0]
         
