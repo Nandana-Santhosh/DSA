@@ -17,7 +17,6 @@ Root Node (3) is always a good node.
 Node 4 -> (3,4) is the maximum value in the path starting from the root.
 Node 5 -> (3,4,5) is the maximum value in the path
 Node 3 -> (3,1,3) is the maximum value in the path.'''
-
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -26,13 +25,15 @@ Node 3 -> (3,1,3) is the maximum value in the path.'''
 #         self.right = right
 class Solution:
     def goodNodes(self, root: TreeNode) -> int:
+        count=[0]
         def dfs(node,maxVal):
             if not node:
-                return 0
-            res=1 if node.val>=maxVal else 0
-       
+                return 
+            if node.val>=maxVal:
+                count[0]+=1
             maxVal=max(maxVal,node.val)
-            res+=dfs(node.left,maxVal)
-            res+=dfs(node.right,maxVal)
-            return res
-        return dfs(root,root.val)
+            dfs(node.left,maxVal)
+            dfs(node.right,maxVal)
+            
+        dfs(root,root.val)
+        return count[0]
